@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2019 by anonymous (http://jsbin.com/gikuhucacu/4/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+// task 1
+// noprotect
+https://jsbin.com/hupobok/edit?js,output
+
+// Rewrite while to for
+let i = 1;
+// while (i < 10) {
+//   console.log(i);
+//   i++;
+//   i++;
+// }
+for(i; i<10; i++){
+  console.log(i);
+  i++
+}
+
+
+// task 2
+
+// Write game
+
+// Random generate number from 1 to 5
+// 1. Ask if user want to play by confirm(); If user cancel - show by alert ('Not today').
+// 2. User write number using prompt();
+// 3. User have 3 turn to win.
+// 4. User choose correct number - show alert with 'Congratulations! You are winner!'
+// 5. If user chooose wrong number by 3 times - show 'Today is not your day.'
+
+// Yoy should use alert(), confirm(), prompt(), Mathy.random(), if, for, while
+
+let random;
+let input;
+let con;
+(function myFunction() {
+  con = confirm("Do you want to play?");
+})();
+if(con){
+  random = Math.round(Math.random()*5);
+  for(let j=0;j<3;j++){
+      input = prompt("Enter number from 1 to 5");
+      if (input == random){
+        alert("Congratulations! You are winner!");
+        break;
+      }else if(j==2){
+        alert("Today is not your day.");
+      }
+    }
+}else {
+  alert("Not today");
+}
+</script>
+</body>
+</html>
